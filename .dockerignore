@@ -1,0 +1,30 @@
+# Docker
+**/*Dockerfile*
+**/*compose.y*ml
+
+# Ignore
+**/*ignore
+
+# License
+**/*LICENSE*
+
+# ReadMe
+**/*README*
+
+# Git
+**/.git
+
+# Environments
+**/venv
+
+# MakeFile
+**/*Makefile*
+
+# Python
+**/__pycache__
+
+# PyCharm
+**/.idea
+
+# Init
+**/init

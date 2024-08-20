@@ -1,0 +1,151 @@
+# Data
+data/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Temporary Files
+*.log
+*.swp
+*.swo
+
+# Byte-Compiled / Optimized / DLL Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# PEP 582
+__pypackages__/
+
+# C Extensions
+*.so
+
+# Distribution / Packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer Logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit Test / Coverage Reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# PyBuilder
+.pybuilder/
+target/
+
+# PoeTry
+# poetry.lock
+
+# PipENV
+# Pipfile.lock
+
+# PyENV
+# .python-version
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre Type Checker
+.pyre/
+
+# Pytype Static Type Analyzer
+.pytype/
+
+# Cython Debug Symbols
+cython_debug/
+
+# Sphinx Documentation
+docs/_build/
+
+# PDM
+# pdm.lock
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# SageMath Parsed Files
+*.sage.py
+
+# Spyder Project Settings
+.spyderproject
+.spyproject
+
+# Rope Project Settings
+.ropeproject
+
+# MKDocs
+site

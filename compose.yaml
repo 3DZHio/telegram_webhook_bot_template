@@ -1,0 +1,49 @@
+services:
+  src:
+    container_name: src
+    restart: always
+    networks:
+      - network
+    build: .
+    depends_on:
+      - storage
+      - database
+
+  storage:
+    container_name: storage
+    restart: always
+    networks:
+      - network
+    image: redis
+    volumes:
+      - ./data/storage:/data
+
+  database:
+    container_name: database
+    restart: always
+    networks:
+      - network
+    image: postgres
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - ./init/database:/docker-entrypoint-initdb.d
+      - ./data/database:/var/lib/postgresql/data
+
+  adminer:
+    container_name: adminer
+    restart: always
+    networks:
+      - network
+    image: adminer
+    depends_on:
+      - database
+    ports:
+      - 8080:8080
+
+networks:
+  network:
+    name: network
+    driver: bridge

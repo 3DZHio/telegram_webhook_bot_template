@@ -1,0 +1,9 @@
+aiogram
+aiohttp
+asyncpg
+asyncio
+loguru
+python-dotenv
+pydantic
+pydantic-settings
+redis
