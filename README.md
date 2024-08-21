@@ -5,8 +5,8 @@
 ## 🔗 REPOSITORY
 
 ```shell
-git clone https://github.com/3DZHio/telegram_bot_template.git
-cd telegram_bot_template
+git clone https://github.com/3DZHio/telegram_webhook_bot_template.git
+cd telegram_webhook_bot_template
 mv .env.example .env
 ```
 
