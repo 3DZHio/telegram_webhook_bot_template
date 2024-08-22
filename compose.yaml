@@ -6,8 +6,32 @@ services:
       - network
     build: .
     depends_on:
+      - proxy
       - storage
       - database
+    expose:
+      - ${WEBHOOK_PORT}
+
+  proxy:
+    container_name: proxy
+    restart: always
+    networks:
+      - network
+    image: nginx
+    environment:
+      WEBHOOK_HOST: ${WEBHOOK_HOST}
+      WEBHOOK_PORT: ${WEBHOOK_PORT}
+      WEBHOOK_PATH: ${WEBHOOK_PATH}
+      WEBHOOK_DOMAIN: ${WEBHOOK_DOMAIN}
+      ADMINER_HOST: ${ADMINER_HOST}
+      ADMINER_PORT: ${ADMINER_PORT}
+      ADMINER_PATH: ${ADMINER_PATH}
+    volumes:
+      - ./init/proxy:/etc/nginx/templates
+      - ./data/ssl:/etc/letsencrypt
+    ports:
+      - 80:80
+      - 443:443
 
   storage:
     container_name: storage
@@ -40,8 +64,8 @@ services:
     image: adminer
     depends_on:
       - database
-    ports:
-      - 8080:8080
+    expose:
+      - ${ADMINER_PORT}
 
 networks:
   network:
