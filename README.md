@@ -39,6 +39,13 @@ sudo docker run --name "${DOMAIN}" --detach \
 
 ### Fill .env
 
+### Redis Fix
+
+```shell
+echo "vm.overcommit_memory = 1" | sudo tee /etc/sysctl.d/nextcloud-aio-memory-overcommit.conf
+sudo sysctl "vm.overcommit_memory=1"
+```
+
 ---
 
 ## 📦 DOCKER
