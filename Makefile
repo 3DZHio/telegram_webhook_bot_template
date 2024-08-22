@@ -1,40 +1,46 @@
+S=sudo
+E=@echo
 D=docker
 DS=docker system
 DC=docker compose
 
 
-## MAIN ##
-
-
-
 ## DOCKER ##
 ps:
-	sudo $(D) ps --all
+	$(S) $(D) ps --all
+
+rm:
+	$(E) USAGE: make rm id=
+	$(S) $(D) rm --force $(id)
 
 images:
-	sudo $(D) images --all
+	$(S) $(D) images --all
+
+rmi:
+	$(E) USAGE: make rmi id=
+	$(S) $(D) rmi --force $(id)
 
 
 ## DOCKER SYSTEM ##
 prune:
-	sudo $(DS) prune --volumes --force
+	$(S) $(DS) prune --volumes --force
 
 
 ## DOCKER COMPOSE ##
 build:
-	sudo $(DC) build
+	$(S) $(DC) build
 
 up:
-	sudo $(DC) up --remove-orphans
+	$(S) $(DC) up --remove-orphans
 
 upd:
-	sudo $(DC) up --detach --remove-orphans
+	$(S) $(DC) up --detach --remove-orphans
 
 down:
-	sudo $(DC) down
+	$(S) $(DC) down
 
 logs:
-	sudo $(DC) logs --follow
+	$(S) $(DC) logs --follow
 
 
 ## EXTENSION ##
