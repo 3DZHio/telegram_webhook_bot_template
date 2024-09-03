@@ -7,18 +7,17 @@ from src.bot.utils import routers
 from src.database.models import users
 
 
-# ADMIN
+## MAIN ##
+# START #
+@routers.msg.message(CommandStart())
+async def start(message: Message) -> None:
+    await message.delete()
+    await users.add(message.from_user.id)
+    await message.answer(text=outer.msg_start)
+
+
+## ADMIN ##
 @routers.admin_msg.message(F.text == outer.get_admin)
 async def admin(message: Message) -> None:
     await message.delete()
     await message.answer(text=outer.msg_admin)
-
-
-# START
-@routers.msg.message(CommandStart())
-async def start(message: Message) -> None:
-    uid = message.from_user.id
-    await message.delete()
-    if not (await users.exists(uid)):
-        await users.add(uid)
-    await message.answer(text=outer.msg_start)

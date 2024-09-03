@@ -2,23 +2,27 @@ from aiogram import Router
 
 from src.bot.utils import filters
 
-# MESSAGES
+## MESSAGES ##
+# MAIN #
 msg = Router()
 
-# CALLBACKS
-cb = Router()
-
-# INLINES
-inl = Router()
-
-# ERRORS
-err = Router()
-
-# EXTRA
-# Admin
+# ADMIN #
 admin_msg = Router()
 admin_msg.message.filter(filters.IsAdmin())
+
+## CALLBACKS ##
+# MAIN #
+# cb = Router()
+
+# ADMIN #
 # admin_cb = Router()
-# admin_cb.message.filter(filters.IsAdmin())
-# admin_inl = Router()
-# admin_inl.message.filter(filters.IsAdmin())
+# admin_cb.callback_query.filter(filters.IsAdmin())
+
+
+## INLINES ##
+# MAIN #
+# inl = Router()
+
+## ERRORS ##
+# MAIN #
+# err = Router()

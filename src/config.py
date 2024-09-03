@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from pydantic import SecretStr, PostgresDsn, RedisDsn, HttpUrl
+from pydantic import SecretStr, HttpUrl, RedisDsn, PostgresDsn
 from pydantic_settings import BaseSettings
 
 
@@ -8,7 +8,7 @@ class Settings(BaseSettings, case_sensitive=True):
 	
 	## MAIN ##
 	# Pending Updates #
-	DROP: int
+	PENDING_UPDATES: int
 	
 	# Logging #
 	LOG_LEVEL: int
@@ -39,7 +39,11 @@ class Settings(BaseSettings, case_sensitive=True):
 	DB_PORT: SecretStr
 	DB_NAME: SecretStr
 	
-	## PROPRETIES ##
+	## PROPERTIES ##
+	@property
+	def pending_updates(self) -> bool | None:
+		return True if settings.PENDING_UPDATES == 1 else None
+	
 	@property
 	def webhook_url(self) -> HttpUrl:
 		return f"https://{self.WEBHOOK_DOMAIN.get_secret_value()}/{settings.WEBHOOK_PATH.get_secret_value()}"

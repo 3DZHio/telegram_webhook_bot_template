@@ -1,9 +1,5 @@
-# BOT COMMANDS #
-bot_commands: dict[str, str] = {
-	"start": "Start",
-}
-
-# MESSAGES #
+## MESSAGES ##
+# MAIN #
 msg_start = "Start"
 
 # ADMIN #

@@ -4,26 +4,33 @@ from src.bot.handlers import messages, callbacks, inlines, errors
 
 
 def get_routers() -> list[Router]:
-    # MESSAGES
-    msg = [
-        messages.routers.msg,
-    ]
-    # CALLBACKS
-    cb = [
-        # callbacks.routers.cb,
-    ]
-    # INLINES
-    inl = [
-        # inlines.routers.inl,
-    ]
-    # ERRORS
-    err = [
-        # errors.routers.err,
-    ]
-    # EXTRA
-    extra = [
-        messages.routers.admin_msg,
-        # callbacks.routers.admin_cb,
-        # inlines.routers.admin_inl,
-    ]
-    return msg + cb + inl + err + extra
+	## MESSAGES ##
+	msg = [
+		# MAIN #
+		messages.routers.msg,
+		
+		# ADMIN #
+		messages.routers.admin_msg,
+	]
+	
+	## CALLBACKS ##
+	cb = [
+		# MAIN #
+		# callbacks.routers.cb,
+		
+		# ADMIN #
+		# callbacks.routers.admin_cb,
+	]
+	
+	## INLINES ##
+	inl = [
+		# MAIN #
+		# inlines.routers.inl,
+	]
+	
+	## ERRORS ##
+	err = [
+		# MAIN #
+		# errors.routers.err,
+	]
+	return msg + cb + inl + err

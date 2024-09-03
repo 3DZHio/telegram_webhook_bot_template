@@ -5,45 +5,32 @@
 ## 🔗 REPOSITORY
 
 ```shell
-git clone https://github.com/3DZHio/telegram_webhook_bot_template.git
-cd telegram_webhook_bot_template
-mv .env.example .env
+git clone "https://github.com/3DZHio/telegram_webhook_bot_template.git"
 ```
 
 ---
+
+> [!IMPORTANT]
+> Perform Actions in Project Folder
+> ```shell
+> cd <PROJECT_FOLDER>
+> ```
 
 ## ⚙️ DEPENDENCIES
 
 ### [Install Docker](https://www.docker.com/)
 
-### SSL Certificate ( Make Sure it works correctly | Remove --dry-run )
+### Configure `.env.example`
 
 ```shell
-EMAIL=
-DOMAIN=
-
-# Get #
-sudo docker run \
-  --publish "80:80" \
-  --volume "./data/ssl:/etc/letsencrypt" \
-  certbot/certbot \
-  certonly --dry-run --standalone --email "${EMAIL}" --agree-tos --domain "${DOMAIN}"
-
-# Renew #
-sudo docker run --name "${DOMAIN}" --detach \
-  --publish "8000:80" \
-  --volume "./data/ssl:/etc/letsencrypt" \
-  certbot/certbot \
-  renew --dry-run --quiet --pre-hook "nginx stop" --post-hook "nginx start"
+vi .env.example || nano .env.example
 ```
 
-### Fill .env
-
-### Redis Fix
+### PreRequisites
 
 ```shell
-echo "vm.overcommit_memory = 1" | sudo tee /etc/sysctl.d/nextcloud-aio-memory-overcommit.conf
-sudo sysctl "vm.overcommit_memory=1"
+chmod +x prerequisites.sh
+./prerequisites.sh
 ```
 
 ---
@@ -62,10 +49,10 @@ make build up
 make down
 ```
 
-### 📌 MakeFile Info
-
-```shell
-cat Makefile
-```
+> [!TIP]
+> 📌 MakeFile Info
+> ```shell
+> cat Makefile
+> ```
 
 ---

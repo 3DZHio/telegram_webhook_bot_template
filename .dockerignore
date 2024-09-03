@@ -5,9 +5,6 @@
 # Ignore
 **/*ignore
 
-# License
-**/*LICENSE*
-
 # ReadMe
 **/*README*
 
@@ -20,11 +17,11 @@
 # MakeFile
 **/*Makefile*
 
-# Python
-**/__pycache__
-
 # PyCharm
 **/.idea
 
 # Init
 **/init
+
+# Shell
+**/*.sh
