@@ -55,4 +55,10 @@ make down
 > cat Makefile
 > ```
 
+## TO INSTALL ON SERVER
+
+```shell
+cat server.sh
+```
+
 ---
