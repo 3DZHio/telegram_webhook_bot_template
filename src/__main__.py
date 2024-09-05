@@ -7,7 +7,7 @@ from aiohttp import web
 from redis.asyncio import Redis
 
 from src.bot.handlers import get_routers
-from src.bot.utils.logs import setup_logger
+from src.logs import setup_logger
 from src.config import settings
 from src.database.core import db
 
