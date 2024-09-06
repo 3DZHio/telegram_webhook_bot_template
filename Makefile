@@ -23,6 +23,10 @@ rmi:
 prune:
 	$(S) $(D) system prune --volumes --force
 
+exec:
+	$(E) USAGE: make exec exec=
+	$(S) $(D) exec -it $(exec)
+
 
 ## DOCKER COMPOSE ##
 build:
