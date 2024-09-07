@@ -49,7 +49,7 @@ class Settings(BaseSettings, case_sensitive=True):
 		return f"https://{self.WEBHOOK_DOMAIN.get_secret_value()}/{settings.WEBHOOK_PATH.get_secret_value()}"
 	
 	@property
-	def storage_dsn(self) -> PostgresDsn:
+	def storage_dsn(self) -> RedisDsn:
 		return (
 			"redis"
 			f"://{settings.STG_HOST.get_secret_value()}"
@@ -58,7 +58,7 @@ class Settings(BaseSettings, case_sensitive=True):
 		)
 	
 	@property
-	def database_dsn(self) -> RedisDsn:
+	def database_dsn(self) -> PostgresDsn:
 		return (
 			"postgres"
 			f"://{settings.DB_USER.get_secret_value()}"
