@@ -4,12 +4,12 @@ from src.config import settings
 
 
 class DataBase:
+	## MAIN ##
 	def __init__(self, dsn: str) -> None:
 		"""INIT"""
 		self.dsn = dsn
 		self.pool = None
 	
-	## MAIN ##
 	async def connect(self) -> None:
 		"""CONNECT"""
 		if not self.pool:
