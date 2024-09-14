@@ -3,6 +3,7 @@ from aiogram.exceptions import TelegramBadRequest
 from aiogram.fsm.context import FSMContext
 
 
+## MAIN ##
 async def delete_data(names: str | list[str], state: FSMContext) -> None:
     await state.update_data({name: None for name in (names if isinstance(names, list) else [names])})
 
