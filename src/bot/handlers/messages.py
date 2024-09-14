@@ -11,8 +11,10 @@ from src.database.models import users
 # START #
 @routers.msg.message(CommandStart())
 async def start(message: Message) -> None:
+    uid = message.from_user.id
     await message.delete()
-    await users.add(message.from_user.id)
+    if not await users.exists(uid):
+        await users.add(uid)
     await message.answer(text=outer.msg_start)
 
 
