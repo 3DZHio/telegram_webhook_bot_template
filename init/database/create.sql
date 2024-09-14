@@ -1,4 +1,4 @@
 -- USERS --
 CREATE TABLE users (
-    uid BIGINT NOT NULL UNIQUE
+    uid BIGINT NOT NULL
 );
