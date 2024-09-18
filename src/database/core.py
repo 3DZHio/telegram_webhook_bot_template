@@ -15,7 +15,7 @@ class DataBase:
 	
 	async def disconnect(self) -> None:
 		"""DISCONNECT"""
-		self.pool.close()
+		await self.pool.close()
 	
 	## METHODS ##
 	async def execute(self, query: str, *args) -> None:
