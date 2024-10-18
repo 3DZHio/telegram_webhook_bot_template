@@ -1,13 +1,22 @@
 #!/bin/bash
 
 
-## Variables ##
-source .env 2>/dev/null || source .env.example
+## START ##
+echo "| START |"
 
 
-## ReName .env.example To .env ##
+## ENV ##
 if [ -f .env.example ]; then
-  mv .env.example .env
+    ## ReName .env.example To .env ##
+    mv .env.example .env
+else
+    if [ -f .env ]; then
+        ## Variables ##
+        source .env
+    else
+        echo "| ERROR | // NOT FOUND // .env or .env.example file" >&2
+        exit 1
+    fi
 fi
 
 
@@ -23,9 +32,9 @@ if [ "$(sudo cat /proc/sys/vm/overcommit_memory)" != "1" ]; then
 fi
 
 
-## SSL Certificate ##
-sudo docker run --rm \
-  --publish "80:80" \
-  --volume "./init/ssl:/etc/letsencrypt" \
-  certbot/certbot \
-  certonly "$(if [ "${DRY_RUN}" == "1" ]; then echo "--dry-run"; fi)" --non-interactive --standalone --email "${EMAIL}" --agree-tos --domain "${WEBHOOK_DOMAIN}"
+## Install Requirements ##
+pip install -r requirements.txt
+
+
+## SUCCESS ##
+echo "| SUCCESS |"
