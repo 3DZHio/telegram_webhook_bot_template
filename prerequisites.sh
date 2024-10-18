@@ -36,5 +36,13 @@ fi
 pip install -r requirements.txt
 
 
+## SSL Certificate ##
+sudo docker run --rm \
+    --publish "80:80" \
+    --volume "./init/ssl:/etc/letsencrypt" \
+    certbot/certbot \
+    certonly "$(if [ "${DRY_RUN}" == "1" ]; then echo "--dry-run"; fi)" --non-interactive --standalone --email "${EMAIL}" --agree-tos --domain "${WEBHOOK_DOMAIN}"
+
+
 ## SUCCESS ##
 echo "| SUCCESS |"
