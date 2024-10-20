@@ -35,9 +35,9 @@ class DataBase:
 	
 	## COMMANDS ##
 	@staticmethod
-	def select(columns: str, table: str, conditions: str = "TRUE") -> str:
+	def select(columns: str, table: str, conditions: str = "TRUE", extra: str = "") -> str:
 		"""SELECT"""
-		return f"SELECT {columns} FROM {table} WHERE {conditions};"
+		return f"SELECT {columns} FROM {table} WHERE {conditions} {extra};"
 	
 	@staticmethod
 	def insert(table: str, columns: str, values: str) -> str:
