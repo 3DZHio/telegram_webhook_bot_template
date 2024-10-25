@@ -35,9 +35,9 @@ class DataBase:
 	
 	## COMMANDS ##
 	@staticmethod
-	def select(columns: str, table: str, conditions: str = "TRUE", extra: str = "") -> str:
+	def select(columns: str, table: str, where: str = "TRUE", extra: str = "") -> str:
 		"""SELECT"""
-		return f"SELECT {columns} FROM {table} WHERE {conditions} {extra};"
+		return f"SELECT {columns} FROM {table} WHERE {where} {extra};"
 	
 	@staticmethod
 	def insert(table: str, columns: str, values: str) -> str:
@@ -45,14 +45,14 @@ class DataBase:
 		return f"INSERT INTO {table} ({columns}) VALUES ({values});"
 	
 	@staticmethod
-	def update(table: str, columns_values: str, conditions: str = "TRUE") -> str:
+	def update(table: str, columns_values: str, where: str = "TRUE") -> str:
 		"""UPDATE"""
-		return f"UPDATE {table} SET {columns_values} WHERE {conditions};"
+		return f"UPDATE {table} SET {columns_values} WHERE {where};"
 	
 	@staticmethod
-	def delete(table: str, conditions: str = "TRUE") -> str:
+	def delete(table: str, where: str = "TRUE") -> str:
 		"""DELETE"""
-		return f"DELETE FROM {table} WHERE {conditions};"
+		return f"DELETE FROM {table} WHERE {where};"
 
 
 db = DataBase()
