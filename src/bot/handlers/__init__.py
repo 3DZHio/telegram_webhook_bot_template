@@ -5,23 +5,21 @@ from src.bot.handlers import messages, callbacks, inlines, errors
 
 def get_routers() -> list[Router]:
 	return [
-		## MESSAGES ##
-		# MAIN #
+		### MESSAGES ###
+		## MAIN ##
 		messages.routers.msg,
-		# ADMIN #
+		## ADMIN ##
 		messages.routers.admin_msg,
 		
-		## CALLBACKS ##
-		# MAIN #
+		### CALLBACKS ###
+		## MAIN ##
 		# callbacks.routers.cb,
-		# ADMIN #
+		## ADMIN ##
 		# callbacks.routers.admin_cb,
 		
-		## INLINES ##
-		# MAIN #
+		### INLINES ###
 		# inlines.routers.inl,
 		
-		## ERRORS ##
-		# MAIN #
+		### ERRORS ###
 		# errors.routers.err,
 	]

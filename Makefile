@@ -1,11 +1,11 @@
-## VARIABLES ##
+### VARIABLES ###
 S=sudo
 E=@echo
 D=docker
 DC=docker compose
 
 
-## DOCKER ##
+### DOCKER ###
 ps:
 	$(S) $(D) ps --all
 
@@ -28,7 +28,7 @@ exec:
 	$(S) $(D) exec -it $(exec)
 
 
-## DOCKER COMPOSE ##
+### DOCKER COMPOSE ###
 build:
 	$(S) $(DC) build
 

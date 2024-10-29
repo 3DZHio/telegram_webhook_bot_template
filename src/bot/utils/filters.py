@@ -4,6 +4,7 @@ from aiogram.types import Message
 from src.config import settings
 
 
+### ADMIN ###
 class IsAdmin(Filter):
     def __init__(self) -> None:
         self.admin_ids = settings.ADMIN_IDS.get_secret_value()

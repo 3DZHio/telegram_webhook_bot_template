@@ -1,7 +1,7 @@
-# Data
+# Data #
 data/
 
-# Environments
+# Environments #
 .env
 .venv
 env/
@@ -10,35 +10,35 @@ ENV/
 env.bak/
 venv.bak/
 
-# PyCharm
+# PyCharm #
 .idea/
 
-# Jupyter Notebook
+# Jupyter Notebook #
 .ipynb_checkpoints
 
-# IPython
+# IPython #
 profile_default/
 ipython_config.py
 
-# Temporary Files
+# Temporary Files #
 *.log
 *.swp
 *.swo
 
-# Byte-Compiled / Optimized / DLL Files
+# Byte-Compiled / Optimized / DLL Files #
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
 *.pyo
 
-# PEP 582
+# PEP 582 #
 __pypackages__/
 
-# C Extensions
+# C Extensions #
 *.so
 
-# Distribution / Packaging
+# Distribution / Packaging #
 .Python
 build/
 develop-eggs/
@@ -58,11 +58,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Installer Logs
+# Installer Logs #
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit Test / Coverage Reports
+# Unit Test / Coverage Reports #
 htmlcov/
 .tox/
 .nox/
@@ -77,75 +77,75 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
+# Translations #
 *.mo
 *.pot
 
-# PyInstaller
+# PyInstaller #
 *.manifest
 *.spec
 
-# Celery
+# Celery #
 celerybeat-schedule
 celerybeat.pid
 
-# Django
+# Django #
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask
+# Flask #
 instance/
 .webassets-cache
 
-# Scrapy
+# Scrapy #
 .scrapy
 
-# PyBuilder
+# PyBuilder #
 .pybuilder/
 target/
 
-# PoeTry
+# PoeTry #
 # poetry.lock
 
-# PipENV
+# PipENV #
 # Pipfile.lock
 
-# PyENV
+# PyENV #
 # .python-version
 
-# MyPy
+# MyPy #
 .mypy_cache/
 .dmypy.json
 dmypy.json
 
-# Pyre Type Checker
+# Pyre Type Checker #
 .pyre/
 
-# Pytype Static Type Analyzer
+# Pytype Static Type Analyzer #
 .pytype/
 
-# Cython Debug Symbols
+# Cython Debug Symbols #
 cython_debug/
 
-# Sphinx Documentation
+# Sphinx Documentation #
 docs/_build/
 
-# PDM
+# PDM #
 # pdm.lock
 .pdm.toml
 .pdm-python
 .pdm-build/
 
-# SageMath Parsed Files
+# SageMath Parsed Files #
 *.sage.py
 
-# Spyder Project Settings
+# Spyder Project Settings #
 .spyderproject
 .spyproject
 
-# Rope Project Settings
+# Rope Project Settings #
 .ropeproject
 
-# MKDocs
+# MKDocs #
 site

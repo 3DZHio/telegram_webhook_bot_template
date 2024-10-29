@@ -1,7 +1,7 @@
-## MESSAGES ##
-# MAIN #
+### MESSAGES ###
+## MAIN ##
 msg_start = "Start"
 
-# ADMIN #
+## ADMIN ##
 get_admin = "."
 msg_admin = "Admin"

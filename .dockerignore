@@ -1,27 +1,27 @@
-# Docker
+# Docker #
 **/*Dockerfile*
 **/*compose.y*ml
 
-# Ignore
+# Ignore #
 **/*ignore
 
-# ReadMe
+# ReadMe #
 **/*README*
 
-# Git
+# Git #
 **/.git
 
-# Environments
+# Environments #
 **/venv
 
-# MakeFile
+# MakeFile #
 **/*Makefile*
 
-# PyCharm
+# PyCharm #
 **/.idea
 
-# Init
+# Init #
 **/init
 
-# Shell
+# Shell #
 **/*.sh
