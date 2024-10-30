@@ -9,7 +9,7 @@ def get_routers() -> list[Router]:
 		## MAIN ##
 		messages.routers.msg,
 		## ADMIN ##
-		messages.routers.admin_msg,
+		# messages.routers.admin_msg,
 		
 		### CALLBACKS ###
 		## MAIN ##

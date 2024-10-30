@@ -5,7 +5,7 @@ from src.config import settings
 
 
 ### ADMIN ###
-class IsAdmin(Filter):
+class Admin(Filter):
     def __init__(self) -> None:
         self.admin_ids = settings.ADMIN_IDS.get_secret_value()
 

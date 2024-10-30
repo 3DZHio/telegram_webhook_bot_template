@@ -1,4 +1,4 @@
-from aiogram import Bot, F
+from aiogram import Bot
 from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
@@ -21,7 +21,3 @@ async def cmd_start(message: Message, state: FSMContext, bot: Bot) -> None:
 
 
 ### ADMIN ###
-@routers.admin_msg.message(F.text == outer.get_admin)
-async def cmd_admin(message: Message) -> None:
-    await message.delete()
-    await message.answer(text=outer.msg_admin)
